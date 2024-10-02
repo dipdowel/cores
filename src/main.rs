@@ -30,7 +30,7 @@ use crate::sys_linux::{drop_privileges, restore_privileges, DropPrivilegeResult}
    cores 2 on            Set core 2 online, other cores remain unchanged.
    cores 2 off           Set core 2 offline, other cores remain unchanged.
    cores -s 2            Set cores 0 and 1 online, set all the other cores offline.
-   cores -s 3            Set cores 0, 1, 2, 3 online, set all the other cores offline.
+   cores -s 3            Set cores 0, 1, 2 online, set all the other cores offline.
    cores -c 1-3,5        Set cores 0, 1, 2, 3, 5 online, set all the other cores offline.
    cores -c 0-2,4-5      Set cores 0, 1, 2, 4, 5 online, set all the other cores offline.
    cores -c \"0-2, 4-5\"   Set cores 0, 1, 2, 4, 5 online, set all the other cores offline.

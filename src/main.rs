@@ -95,7 +95,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     if args.version {
         let name = env!("CARGO_PKG_NAME");
         let version = env!("CARGO_PKG_VERSION");
-        println!("{} version {}, October 2024", name, version);
+        let build_date = env!("BUILD_DATE");
+        println!("{}\nversion: {}\nbuilt: {}", name, version, build_date);
         return Ok(());
     }
 

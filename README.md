@@ -86,4 +86,4 @@ all other operations are performed using UID of the original _sudoer_ (including
 
 ## Limitations
 - On most systems `core 0` is always online as it is essential for handling critical system interrupts, low-level kernel tasks, and managing system stability, so attempts to disable core 0 are ignored.
-- cores is currently works only on Linux-based systems.
+- `cores` currently works only on Linux-based systems.

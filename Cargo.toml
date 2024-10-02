@@ -1,0 +1,13 @@
+[package]
+name = "cores"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+clap = { version = "4.5.19", features = ["derive"] }
+
+[profile.release]
+lto = true
+opt-level = "z"
+panic = "abort"

@@ -1,5 +1,4 @@
 use std::process::Command;
-use std::time::{SystemTime, UNIX_EPOCH};
 
 fn main() {
     // Check the target OS environment variable provided by Cargo

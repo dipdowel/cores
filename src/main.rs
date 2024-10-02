@@ -35,9 +35,12 @@ use crate::sys_linux::{drop_privileges, restore_privileges, DropPrivilegeResult}
    cores -c 0-2,4-5      Set cores 0, 1, 2, 4, 5 online, set all the other cores offline.
    cores -c \"0-2, 4-5\"   Set cores 0, 1, 2, 4, 5 online, set all the other cores offline.
 
+\x1b[4mAuthor\x1b[0m: Leo Boguslavskiy
+
 \x1b[4mFeedback\x1b[0m:
    - Bug reports: https://github.com/dipdowel/cores/issues
    - Suggestions: https://github.com/dipdowel/cores/discussions"
+
 )]
 struct Args {
     /// Specifies a core to set online or offline.
@@ -92,7 +95,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     if args.version {
         let name = env!("CARGO_PKG_NAME");
         let version = env!("CARGO_PKG_VERSION");
-        println!("{} version {}", name, version);
+        println!("{} version {}, October 2024", name, version);
         return Ok(());
     }
 

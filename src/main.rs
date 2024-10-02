@@ -60,6 +60,10 @@ struct Args {
     #[arg(short, long, exclusive = true, conflicts_with_all = &["set", "reset", "core", "state"], value_name = "CPU_LIST")]
     custom: Option<String>,
 
+    /// Print version of `cores`.
+    #[arg(short, long, exclusive = true)]
+    version: bool,
+
     /// Print state of the cores in JSON format.
     #[arg(short, long)]
     json: bool,
@@ -80,6 +84,17 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Parse the CLI arguments (at this point as non-root)
     let args = Args::parse();
+
+
+    //----------------------------------------------------------------------------------------------
+    // Print version and exit
+    //----------------------------------------------------------------------------------------------
+    if args.version {
+        let name = env!("CARGO_PKG_NAME");
+        let version = env!("CARGO_PKG_VERSION");
+        println!("{} version {}", name, version);
+        return Ok(());
+    }
 
     //----------------------------------------------------------------------------------------------
     // Render the CPU state in JSON or human-friendly text format and exit (if no args or just `-j`)

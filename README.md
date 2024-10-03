@@ -34,7 +34,7 @@ Then open a new terminal and run `cores --help` to verify the installation.
 
 ## Use cases
 - Enable or disable individual CPU cores to manage power consumption or heat generation.
-- Simulate a machine with fewer CPU cores for testing (e.g., to mimic an embedded system).
+- Simulate a machine with fewer CPU cores to test your software on (e.g. mimic an embedded system).
 - Test multithreaded software by simulating core failures.
 - View the current status of all CPU cores with a simple command.
 - Output core states in JSON format for further automation.

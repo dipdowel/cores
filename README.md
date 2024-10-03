@@ -31,6 +31,8 @@ sudo cp ./target/release/cores /usr/local/bin
 ```
 Then open a new terminal and run `cores --help` to verify the installation.
 
+## Prebuilt binaries
+Prebuilt binaries for some platforms are available on https://codument.com/cores/
 
 ## Use cases
 - Enable or disable individual CPU cores to manage power consumption or heat generation.
